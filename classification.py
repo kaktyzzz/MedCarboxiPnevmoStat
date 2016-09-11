@@ -146,10 +146,10 @@ plt.show()
 data = data.drop(['№', "Bol'noj", "Nomer istorii bolezni", "Data operacii", "Chuvstvitel'nost' k ab", "Ustojchivost' k a/b"], axis=1)
 
 train = data.drop(["Rezul'tat", "Ajerobnost'"], axis=1) #DROP TARGET
-target = data["Ajerobnost'"]
+target = data["Rezul'tat"]
 
 
-kfold = 10 #количество подвыборок для валидации
+kfold = 5 #количество подвыборок для валидации
 itog_val = {} #список для записи результатов кросс валидации разных алгоритмов
 models = {}
 getlist = []
