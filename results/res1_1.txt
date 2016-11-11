@@ -1,0 +1,93 @@
+[add] KNeighborsClassifier
+kfolds = 10
+
+
+
+Кросс-валидация:
+{'RandomForestClassifier': 0.6150000000000001, 'LogisticRegression': 0.51500000000000001, 'SVC': 0.47000000000000003, 'KNeighborsClassifier': 0.33000000000000002}
+
+Classificator report for ||  | KNeighborsClassifier
+             precision    recall  f1-score   support
+
+ class 1: 0       0.00      0.00      0.00         3
+ class 2: -       0.00      0.00      0.00         2
+ class 3: +       0.45      0.62      0.53         8
+class 4: +!       0.00      0.00      0.00         2
+
+avg / total       0.24      0.33      0.28        15
+
+                     class 1: 0: se = 0.000000 sp = 1.000000 ac = 0.625000 +pv =   nan -pv = 0.625000
+                     class 2: -: se = 0.000000 sp = 0.555556 ac = 0.454545 +pv = 0.000000 -pv = 0.714286
+                     class 3: +: se = 0.625000 sp = 0.000000 ac = 0.357143 +pv = 0.454545 -pv = 0.000000
+                    class 4: +!: se = 0.000000 sp = 1.000000 ac = 0.714286 +pv =   nan -pv = 0.714286
+Точность предсказания, среднее: 0.333333
+
+/usr/lib/python2.7/dist-packages/sklearn/metrics/metrics.py:1905: UserWarning: The sum of true positives and false positives are equal to zero for some labels. Precision is ill defined for those labels [1 4]. The precision and recall are equal to zero for some labels. fbeta_score is ill defined for those labels [1 2 4].
+  average=None)
+Classificator report for ||  | LogisticRegression
+             precision    recall  f1-score   support
+
+ class 1: 0       0.50      0.33      0.40         3
+ class 2: -       0.20      0.50      0.29         2
+ class 3: +       0.50      0.50      0.50         8
+class 4: +!       0.00      0.00      0.00         2
+
+avg / total       0.39      0.40      0.38        15
+
+                     class 1: 0: se = 0.333333 sp = 0.833333 ac = 0.666667 +pv = 0.500000 -pv = 0.714286
+                     class 2: -: se = 0.500000 sp = 0.555556 ac = 0.545455 +pv = 0.200000 -pv = 0.833333
+                     class 3: +: se = 0.500000 sp = 0.333333 ac = 0.428571 +pv = 0.500000 -pv = 0.333333
+                    class 4: +!: se = 0.000000 sp = 1.000000 ac = 0.750000 +pv =   nan -pv = 0.750000
+/usr/lib/python2.7/dist-packages/sklearn/metrics/metrics.py:1905: UserWarning: The sum of true positives and false positives are equal to zero for some labels. Precision is ill defined for those labels [4]. The precision and recall are equal to zero for some labels. fbeta_score is ill defined for those labels [4].
+  average=None)
+Точность предсказания, среднее: 0.400000
+
+Classificator report for ||  | SVC
+             precision    recall  f1-score   support
+
+ class 1: 0       0.00      0.00      0.00         3
+ class 2: -       0.00      0.00      0.00         2
+ class 3: +       0.38      0.38      0.38         8
+class 4: +!       0.25      0.50      0.33         2
+
+avg / total       0.23      0.27      0.24        15
+
+                     class 1: 0: se = 0.000000 sp = 1.000000 ac = 0.571429 +pv =   nan -pv = 0.571429
+                     class 2: -: se = 0.000000 sp = 0.571429 ac = 0.444444 +pv = 0.000000 -pv = 0.666667
+                     class 3: +: se = 0.375000 sp = 0.166667 ac = 0.285714 +pv = 0.375000 -pv = 0.166667
+                    class 4: +!: se = 0.500000 sp = 0.500000 ac = 0.500000 +pv = 0.250000 -pv = 0.750000
+Точность предсказания, среднее: 0.266667
+
+/usr/lib/python2.7/dist-packages/sklearn/metrics/metrics.py:1905: UserWarning: The sum of true positives and false positives are equal to zero for some labels. Precision is ill defined for those labels [1]. The precision and recall are equal to zero for some labels. fbeta_score is ill defined for those labels [1 2].
+  average=None)
+/usr/lib/python2.7/dist-packages/sklearn/metrics/metrics.py:1905: UserWarning: The precision and recall are equal to zero for some labels. fbeta_score is ill defined for those labels [4].
+  average=None)
+Classificator report for ||  | RandomForestClassifier
+             precision    recall  f1-score   support
+
+ class 1: 0       1.00      1.00      1.00         3
+ class 2: -       0.25      0.50      0.33         2
+ class 3: +       0.71      0.62      0.67         8
+class 4: +!       0.00      0.00      0.00         2
+
+avg / total       0.61      0.60      0.60        15
+
+                     class 1: 0: se = 1.000000 sp = 1.000000 ac = 1.000000 +pv = 1.000000 -pv = 1.000000
+                     class 2: -: se = 0.500000 sp = 0.727273 ac = 0.692308 +pv = 0.250000 -pv = 0.888889
+                     class 3: +: se = 0.625000 sp = 0.666667 ac = 0.642857 +pv = 0.714286 -pv = 0.571429
+                    class 4: +!: se = 0.000000 sp = 0.900000 ac = 0.750000 +pv = 0.000000 -pv = 0.818182
+Точность предсказания, среднее: 0.600000
+
+Влияние факторов [top 10], %:
+   0.130237 - Vremja operacii
+   0.095566 - Vozrast
+   0.092337 - Vysejannaja kul'tura
+   0.076808 - Mesjac operacii
+   0.076442 - Operirujushhij hirurg
+   0.046583 - chuvstvitel'nost' k levomicetinu
+   0.039806 - Peritonit
+   0.035425 - chuvstvitel'nost' k amikacinu
+   0.034937 - chuvstvitel'nost' k cefotaksimu
+   0.028703 - chuvstvitel'nost' k cefoperazonu
+max: 0.130236983438 min: 0.0
+------------------------------

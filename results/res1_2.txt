@@ -1,0 +1,107 @@
+
+diagnoz:[Острый гангренозно-перфоративный аппендицит, Острый гангренозно-перфоративный дивертикул Меккеля, Острый гангренозный аппендицит, Острый флегмонозный аппендицит]
+bakteriya:[Acinetobacter calcoaceticus, Citrobacter freundii, E. Coli, Enterobacter aerogenes, Enterobacter aerogenes , Enterobacter aerogenes, Citrobacter freundii , Enterococcus faecalis, Pseudomonas aeruginosa, Pseudomonas aeruginosa , Нет]
+Ajerobnost':[Анаэроб, Аэроб, Роста нет]
+hirurg:[Батраченко, Емцев, Козьмин, Сергиенко, Титов, Черногоров]
+/usr/lib/python2.7/dist-packages/sklearn/cross_validation.py:401: Warning: The least populated class in y has only 6 members, which is too few. The minimum number of labels for any class cannot be less than n_folds=10.
+  % (min_labels, self.n_folds)), Warning)
+Кросс-валидация:
+{'RandomForestClassifier': 0.6150000000000001, 'LogisticRegression': 0.495, 'SVC': 0.47000000000000003, 'KNeighborsClassifier': 0.37}
+
+Classificator report for ||  | KNeighborsClassifier
+             precision    recall  f1-score   support
+
+ class 1: 0       0.00      0.00      0.00         3
+ class 2: -       0.00      0.00      0.00         3
+ class 3: +       0.40      1.00      0.57         6
+class 4: +!       0.00      0.00      0.00         3
+
+avg / total       0.16      0.40      0.23        15
+
+                     class 1: 0: se = 0.000000 sp = 1.000000 ac = 0.666667 +pv =   nan -pv = 0.666667
+                     class 2: -: se = 0.000000 sp = 1.000000 ac = 0.666667 +pv =   nan -pv = 0.666667
+                     class 3: +: se = 1.000000 sp = 0.000000 ac = 0.400000 +pv = 0.400000 -pv =   nan
+                    class 4: +!: se = 0.000000 sp = 1.000000 ac = 0.666667 +pv =   nan -pv = 0.666667
+Точность предсказания, среднее: 0.400000
+R^2 score: -0.153846
+Истинные значения      [1 4 1 1 3 3 3 4 2 4 3 2 2 3 3]
+Предсказанные значения [3 3 3 3 3 3 3 3 3 3 3 3 3 3 3]
+
+/usr/lib/python2.7/dist-packages/sklearn/metrics/metrics.py:1905: UserWarning: The sum of true positives and false positives are equal to zero for some labels. Precision is ill defined for those labels [1 2 4]. The precision and recall are equal to zero for some labels. fbeta_score is ill defined for those labels [1 2 4]. 
+  average=None)
+/usr/lib/python2.7/dist-packages/sklearn/metrics/metrics.py:1905: UserWarning: The sum of true positives and false positives are equal to zero for some labels. Precision is ill defined for those labels [2]. The precision and recall are equal to zero for some labels. fbeta_score is ill defined for those labels [2 4]. 
+  average=None)
+Classificator report for ||  | LogisticRegression
+             precision    recall  f1-score   support
+
+ class 1: 0       1.00      0.33      0.50         3
+ class 2: -       0.00      0.00      0.00         3
+ class 3: +       0.38      0.83      0.53         6
+class 4: +!       0.00      0.00      0.00         3
+
+avg / total       0.35      0.40      0.31        15
+
+                     class 1: 0: se = 0.333333 sp = 1.000000 ac = 0.750000 +pv = 1.000000 -pv = 0.714286
+                     class 2: -: se = 0.000000 sp = 1.000000 ac = 0.666667 +pv =   nan -pv = 0.666667
+                     class 3: +: se = 0.833333 sp = 0.111111 ac = 0.400000 +pv = 0.384615 -pv = 0.500000
+                    class 4: +!: se = 0.000000 sp = 0.857143 ac = 0.600000 +pv = 0.000000 -pv = 0.666667
+Точность предсказания, среднее: 0.400000
+R^2 score: 0.038462
+Истинные значения      [1 4 1 1 3 3 3 4 2 4 3 2 2 3 3]
+Предсказанные значения [3 3 3 1 3 3 3 3 3 3 3 3 3 3 4]
+
+Classificator report for ||  | SVC
+             precision    recall  f1-score   support
+
+ class 1: 0       0.00      0.00      0.00         3
+ class 2: -       0.00      0.00      0.00         3
+ class 3: +       0.43      1.00      0.60         6
+class 4: +!       0.00      0.00      0.00         3
+
+avg / total       0.17      0.40      0.24        15
+
+                     class 1: 0: se = 0.000000 sp = 1.000000 ac = 0.666667 +pv =   nan -pv = 0.666667
+                     class 2: -: se = 0.000000 sp = 1.000000 ac = 0.666667 +pv =   nan -pv = 0.666667
+                     class 3: +: se = 1.000000 sp = 0.000000 ac = 0.428571 +pv = 0.428571 -pv =   nan
+                    class 4: +!: se = 0.000000 sp = 0.857143 ac = 0.600000 +pv = 0.000000 -pv = 0.666667
+Точность предсказания, среднее: 0.400000
+R^2 score: -0.346154
+Истинные значения      [1 4 1 1 3 3 3 4 2 4 3 2 2 3 3]
+Предсказанные значения [3 3 3 3 3 3 3 3 3 3 3 3 4 3 3]
+
+/usr/lib/python2.7/dist-packages/sklearn/metrics/metrics.py:1905: UserWarning: The sum of true positives and false positives are equal to zero for some labels. Precision is ill defined for those labels [1 2]. The precision and recall are equal to zero for some labels. fbeta_score is ill defined for those labels [1 2 4]. 
+  average=None)
+Classificator report for ||  | RandomForestClassifier
+             precision    recall  f1-score   support
+
+ class 1: 0       1.00      0.67      0.80         3
+ class 2: -       0.50      0.33      0.40         3
+ class 3: +       0.45      0.83      0.59         6
+class 4: +!       0.00      0.00      0.00         3
+
+avg / total       0.48      0.53      0.48        15
+
+                     class 1: 0: se = 0.666667 sp = 1.000000 ac = 0.888889 +pv = 1.000000 -pv = 0.857143
+                     class 2: -: se = 0.333333 sp = 0.875000 ac = 0.727273 +pv = 0.500000 -pv = 0.777778
+                     class 3: +: se = 0.833333 sp = 0.333333 ac = 0.533333 +pv = 0.454545 -pv = 0.750000
+                    class 4: +!: se = 0.000000 sp = 1.000000 ac = 0.727273 +pv =   nan -pv = 0.727273
+Точность предсказания, среднее: 0.533333
+R^2 score: 0.358974
+Истинные значения      [1 4 1 1 3 3 3 4 2 4 3 2 2 3 3]
+Предсказанные значения [1 3 3 1 3 3 3 3 3 3 3 3 2 3 2]
+
+/usr/lib/python2.7/dist-packages/sklearn/metrics/metrics.py:1905: UserWarning: The sum of true positives and false positives are equal to zero for some labels. Precision is ill defined for those labels [4]. The precision and recall are equal to zero for some labels. fbeta_score is ill defined for those labels [4]. 
+  average=None)
+Влияние факторов [top 10], %:
+   0.107255 - Vysejannaja kul'tura
+   0.098898 - Vremja operacii
+   0.091302 - Vozrast
+   0.069208 - Mesjac operacii
+   0.064143 - chuvstvitel'nost' k levomicetinu
+   0.064083 - Operirujushhij hirurg
+   0.038675 - Peritonit
+   0.036571 - chuvstvitel'nost' k amoksiklavu
+   0.035420 - chuvstvitel'nost' k amikacinu
+   0.034409 - chuvstvitel'nost' k levomicetinu.1
+max: 0.107255021265 min: 0.0
+------------------------------
