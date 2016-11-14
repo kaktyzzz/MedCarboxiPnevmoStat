@@ -1,0 +1,66 @@
+/usr/bin/python2.7 /home/ktz/PycharmProjects/MedCarboxiPnevmoStat/regression.py
+Vozrast:[детский, дошкольный, младенческий, пубертатный, школьный]
+diagnoz:[Острый гангренозно-перфоративный аппендицит, Острый гангренозно-перфоративный дивертикул Меккеля, Острый гангренозный аппендицит, Острый флегмонозный аппендицит]
+bakteriya:[Acinetobacter calcoaceticus, Citrobacter freundii, E. Coli, Enterobacter aerogenes, Enterobacter aerogenes , Enterobacter aerogenes, Citrobacter freundii , Enterococcus faecalis, Pseudomonas aeruginosa, Pseudomonas aeruginosa , Нет]
+Ajerobnost':[Анаэроб, Аэроб, Роста нет]
+hirurg:[Батраченко, Емцев, Козьмин, Сергиенко, Титов, Черногоров]
+/usr/lib/python2.7/dist-packages/sklearn/cross_validation.py:401: Warning: The least populated class in y has only 1 members, which is too few. The minimum number of labels for any class cannot be less than n_folds=10.
+  % (min_labels, self.n_folds)), Warning)
+Кросс-валидация:
+{'RandomForestRegression': -0.44763664359561106, 'ExtraTreesRegression': -0.5701069387824621, 'LogisticRegression': 0.080000000000000002, 'SVC': 0.16499999999999998, 'KNeighborsRegression': -0.36364875586909273}
+
+Report || ExtraTreesRegression
+Средняя абсолютная ошибка: 3.352600
+R^2 score: -0.286592
+Истинные значения      [ 7 11 13 10  6 17 23  9  9 11 12 14  7  8 17  9 12 12  9 12]
+Предсказанные значения [ 10.157  13.383  10.878  13.121  10.522  12.248   8.882  10.077   9.231
+   8.038  11.619  11.699  12.34    9.393  10.038  12.247  10.69   10.887
+  11.631   8.071]
+***************
+ 
+Report || KNeighborsRegression
+Средняя абсолютная ошибка: 2.827500
+R^2 score: 0.016504
+Истинные значения      [ 7 11 13 10  6 17 23  9  9 11 12 14  7  8 17  9 12 12  9 12]
+Предсказанные значения [ 11.4   10.9   11.55  11.4   10.35  11.55  10.9   10.6   10.9   11.15
+  10.9   11.15  11.4   11.2   11.4   11.45  11.4   11.4   11.4   11.55]
+***************
+ 
+Report || LogisticRegression
+Средняя абсолютная ошибка: 2.850000
+R^2 score: 0.146419
+Истинные значения      [ 7 11 13 10  6 17 23  9  9 11 12 14  7  8 17  9 12 12  9 12]
+Предсказанные значения [11 13  8 10  9  9 16  8 13 13 12 12  9  8 11 10  9 16  9  9]
+***************
+ 
+Report || SVC
+Средняя абсолютная ошибка: 3.250000
+R^2 score: -0.262788
+Истинные значения      [ 7 11 13 10  6 17 23  9  9 11 12 14  7  8 17  9 12 12  9 12]
+Предсказанные значения [10 10  9  9 10  9 10  9 10  9 10  9  9 10 10 10  9  9  9  9]
+***************
+ 
+Report || RandomForestRegression
+Средняя абсолютная ошибка: 2.793100
+R^2 score: 0.114355
+Истинные значения      [ 7 11 13 10  6 17 23  9  9 11 12 14  7  8 17  9 12 12  9 12]
+Предсказанные значения [ 10.601  12.665  10.919  13.449   9.238  11.628  12.399  10.872  10.847
+  11.125  10.545  10.863  11.211   9.903  10.219  10.781  11.554  12.347
+  10.903  11.953]
+***************
+ 
+Влияние факторов [top 10], %:
+   0.325300 - vremya do gospitalizacii (chasi)
+   0.118580 - Omentit
+   0.092326 - Vremja operacii
+   0.072777 - Mesjac operacii
+   0.052972 - Diagnoz osnovnoj
+   0.040988 - Operirujushhij hirurg
+   0.040987 - Peritonit
+   0.033606 - chuvstvitel'nost' k piperacillinu
+   0.029491 - chuvstvitel'nost' k ampicilinu
+   0.022014 - Abscess
+max: 0.325299926364 min: 0.0
+------------------------------
+
+Process finished with exit code 0
