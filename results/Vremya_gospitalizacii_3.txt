@@ -1,0 +1,90 @@
+/usr/bin/python2.7 /home/ktz/PycharmProjects/MedCarboxiPnevmoStat/regression.py
+/usr/lib/python2.7/dist-packages/pandas/core/series.py:1001: DeprecationWarning: numpy boolean negative, the `-` operator, is deprecated, use the `~` operator or the logical_not function instead.
+  arr = operator.neg(self.values)
+/usr/lib/python2.7/dist-packages/pandas/core/series.py:1001: DeprecationWarning: numpy boolean negative, the `-` operator, is deprecated, use the `~` operator or the logical_not function instead.
+  arr = operator.neg(self.values)
+/usr/lib/python2.7/dist-packages/pandas/core/series.py:1001: DeprecationWarning: numpy boolean negative, the `-` operator, is deprecated, use the `~` operator or the logical_not function instead.
+  arr = operator.neg(self.values)
+/usr/lib/python2.7/dist-packages/pandas/core/series.py:1001: DeprecationWarning: numpy boolean negative, the `-` operator, is deprecated, use the `~` operator or the logical_not function instead.
+  arr = operator.neg(self.values)
+/usr/lib/python2.7/dist-packages/pandas/core/series.py:1001: DeprecationWarning: numpy boolean negative, the `-` operator, is deprecated, use the `~` operator or the logical_not function instead.
+  arr = operator.neg(self.values)
+/usr/lib/python2.7/dist-packages/pandas/core/series.py:1001: DeprecationWarning: numpy boolean negative, the `-` operator, is deprecated, use the `~` operator or the logical_not function instead.
+  arr = operator.neg(self.values)
+diagnoz:[Острый гангренозно-перфоративный аппендицит, Острый гангренозно-перфоративный дивертикул Меккеля, Острый гангренозный аппендицит, Острый флегмонозный аппендицит]
+bakteriya:[Acinetobacter calcoaceticus, Citrobacter freundii, E. Coli, Enterobacter aerogenes, Enterobacter aerogenes , Enterobacter aerogenes, Citrobacter freundii , Enterococcus faecalis, Enterococcus faecalis , Pseudomonas aeruginosa, Pseudomonas aeruginosa , Staphylococcus epidermidis, Нет]
+hirurg:[Батраченко, Емцев, Козьмин, Котловский, Рязанцев, Сергиенко, Симонов, Титов, Черногоров]
+Ajerobnost':[Анаэроб, Аэроб, Роста нет]
+Vozrast:[детский, дошкольный, младенческий, пубертатный, школьный]
+vremya do gospitalizacii (chasi)':[7 - 24 часа, более 24 ч]
+/usr/local/lib/python2.7/dist-packages/sklearn/cross_validation.py:401: Warning: The least populated class in y has only 1 members, which is too few. The minimum number of labels for any class cannot be less than n_folds=10.
+  % (min_labels, self.n_folds)), Warning)
+Кросс-валидация:
+{'RandomForestRegression': -0.63873894219236771, 'ExtraTreesRegression': -0.96854907738858675, 'LogisticRegression': 0.093055555555555558, 'SVC': 0.13333333333333333, 'KNeighborsRegression': -0.30764792888664988}
+
+Report || ExtraTreesRegression
+Средняя абсолютная ошибка: 3.115412
+R^2 score: -0.488245
+Истинные значения      [16 11 15 12 13 11 10 11  8  8  6  9  9 10 12  6 16  9  8 17 13  8 11 12  7
+ 12 17  9 13 12 10  5 12  9]
+Предсказанные значения [ 13.113   7.526  11.604   8.367   9.888   7.637   8.478  18.498   8.277
+  10.143   8.234  13.54   13.418   8.01    8.725  11.721  12.821  11.177
+  10.898   8.295   9.511  10.423  10.492   7.759  13.506  10.933  10.84
+  10.741  12.047  12.43   11.002   9.65   11.742  11.054]
+***************
+
+Report || KNeighborsRegression
+Средняя абсолютная ошибка: 2.542647
+R^2 score: 0.004694
+Истинные значения      [16 11 15 12 13 11 10 11  8  8  6  9  9 10 12  6 16  9  8 17 13  8 11 12  7
+ 12 17  9 13 12 10  5 12  9]
+Предсказанные значения [ 11.55  11.35  10.9   10.35  11.55  11.65  11.2   10.35  10.95  11.65
+  10.35  11.75  11.1   11.35  11.55  11.1   10.8   11.55  11.55  11.55
+  11.65  10.35  10.35  10.55  11.45  11.2   11.2   11.75  11.2   11.4   11.1
+  10.35  10.35  11.4 ]
+***************
+
+Report || LogisticRegression
+Средняя абсолютная ошибка: 3.117647
+R^2 score: -0.983782
+Истинные значения      [16 11 15 12 13 11 10 11  8  8  6  9  9 10 12  6 16  9  8 17 13  8 11 12  7
+ 12 17  9 13 12 10  5 12  9]
+Предсказанные значения [ 9 10  9 10  9  7 11 23  9 11  8  9 10  9  9 10 13  8  8 10 13  9 13  9 11
+ 11 10 10 13 10 14 11 23 10]
+***************
+
+Report || SVC
+Средняя абсолютная ошибка: 2.588235
+R^2 score: -0.248579
+Истинные значения      [16 11 15 12 13 11 10 11  8  8  6  9  9 10 12  6 16  9  8 17 13  8 11 12  7
+ 12 17  9 13 12 10  5 12  9]
+Предсказанные значения [10 10  9  9  9 10  9  9  9  9  9  9  9 10  9  9  9  9  9  9 10  9  9  9  9
+  9  9  9  9 10  9  9  9 10]
+***************
+
+Report || RandomForestRegression
+Средняя абсолютная ошибка: 2.430353
+R^2 score: 0.009826
+Истинные значения      [16 11 15 12 13 11 10 11  8  8  6  9  9 10 12  6 16  9  8 17 13  8 11 12  7
+ 12 17  9 13 12 10  5 12  9]
+Предсказанные значения [ 12.05   10.442  11.195  11.262  10.996  10.257  10.364  15.539  10.17
+  10.388   9.258  13.532  12.503  10.625  11.057  11.49   11.2    10.504
+   9.911  10.926  12.416  10.509   9.727  10.879  11.915  12.344  10.881
+  11.164  12.569  11.868  11.983   9.438  12.446  11.274]
+***************
+
+Влияние факторов [top 10], %:
+   0.179351 - Operirujushhij hirurg
+   0.148611 - Vremja operacii
+   0.107565 - Omentit
+   0.087270 - Mesjac operacii
+   0.076019 - Abscess
+   0.050738 - Vozrast
+   0.047220 - Peritonit
+   0.034309 - chuvstvitel'nost' k levomicetinu
+   0.032714 - Rezul'tat
+   0.022091 - Vysejannaja kul'tura
+max: 0.179350524031 min: 0.0
+------------------------------
+
+Process finished with exit code 0

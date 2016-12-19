@@ -125,6 +125,10 @@ label.fit(data["Ajerobnost'"].drop_duplicates())
 encode_dict["Ajerobnost'"] = list(label.classes_)
 data["Ajerobnost'"] = label.transform(data["Ajerobnost'"])
 
+label.fit(data["vremya do gospitalizacii (chasi)"].drop_duplicates())
+encode_dict["vremya do gospitalizacii (chasi)'"] = list(label.classes_)
+data["vremya do gospitalizacii (chasi)"] = label.transform(data["vremya do gospitalizacii (chasi)"])
+
 data.to_csv('DATA_encode.csv', sep=';')
 for k, v in encode_dict.iteritems():
     print k + ":[" + ", ".join(v) + "]"
@@ -137,6 +141,12 @@ for k, v in encode_dict.iteritems():
 # data.pivot_table('№', ['Vremya prebivaniya v stacionare (dni)'], "Rezul'tat1", 'count').fillna(0).plot(kind='bar', stacked=True).get_figure().savefig('plots/stacionar_res1.png')
 
 # data.pivot_table('PassengerId', ['Parch'], 'Survived', 'count').plot(ax=axes[1], title='Parch')
+# data.pivot_table('№', ['Vremya prebivaniya v stacionare (dni)'], "Rezul'tat1", 'count').fillna(0).plot().get_figure().savefig('plots/vremyaVStacionare_res1.png')
+# data.pivot_table('№', ['Vremya prebivaniya v stacionare (dni)'], "Vozrast", 'count').fillna(0).plot().get_figure().savefig('plots/vremyaVStacionare_Vozrast.png')
+# data.pivot_table('№', ['Vremya prebivaniya v stacionare (dni)'], "Operirujushhij hirurg", 'count').fillna(0).plot().get_figure().savefig('plots/vremyaVStacionare_OperirujushhijHirurg.png')
+# data.pivot_table('№', ['Vremya prebivaniya v stacionare (dni)'], "Vremja operacii", 'count').fillna(0).plot().get_figure().savefig('plots/vremyaVStacionare_VremjaOperacii.png')
+# data.pivot_table('№', ['Vremya prebivaniya v stacionare (dni)'], "vremya do gospitalizacii (chasi)", 'count').fillna(0).plot().get_figure().savefig('plots/vremyaVStacionare_VremjaDoGospital.png')
+
 plt.show()
 
 data = data.drop(['№', "Bol'noj", "Nomer istorii bolezni", "Data operacii", "Chuvstvitel'nost' k ab", "Ustojchivost' k a/b"], axis=1)

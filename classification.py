@@ -139,6 +139,10 @@ label.fit(data["Ajerobnost'"].drop_duplicates())
 encode_dict["Ajerobnost'"] = list(label.classes_)
 data["Ajerobnost'"] = label.transform(data["Ajerobnost'"])
 
+label.fit(data["vremya do gospitalizacii (chasi)"].drop_duplicates())
+encode_dict["vremya do gospitalizacii (chasi)'"] = list(label.classes_)
+data["vremya do gospitalizacii (chasi)"] = label.transform(data["vremya do gospitalizacii (chasi)"])
+
 data.to_csv('DATA_encode.csv', sep=';')
 for k, v in encode_dict.iteritems():
     print k + ":[" + ", ".join(v) + "]"
@@ -148,12 +152,12 @@ for k, v in encode_dict.iteritems():
 # data.pivot_table('№', ['Vozrast'], "Ajerobnost'", 'count').fillna(0).plot(kind='bar', stacked=True).get_figure().savefig('plots/vosrast_aerob.png')
 # data.pivot_table('№', ['Mesjac operacii'], "Ajerobnost'", 'count').fillna(0).plot(kind='bar', stacked=True).get_figure().savefig('plots/mesyac_aerob.png')
 
-# data.pivot_table('№', ['Operirujushhij hirurg'], "Rezul'tat1", 'count').fillna(0).plot(kind='bar', stacked=True).get_figure().savefig('plots/hirurg_res1.png')
-# data.pivot_table('№', ['Vremja operacii'], "Rezul'tat1", 'count').fillna(0).plot().get_figure().savefig('plots/vremya_res1.png')
-# data.pivot_table('№', ['Vozrast'], "Rezul'tat1", 'count').fillna(0).plot(kind='bar', stacked=True).get_figure().savefig('plots/vosrast_res1.png')
-# data.pivot_table('№', ['Mesjac operacii'], "Rezul'tat1", 'count').fillna(0).plot(kind='bar', stacked=True).get_figure().savefig('plots/mesyac_res1.png')
-# data.pivot_table('№', ["Vysejannaja kul'tura"], "Rezul'tat1", 'count').fillna(0).plot(kind='bar', stacked=True).get_figure().savefig('plots/vysev_res1.png')
-# data.pivot_table('№', ['Vremya prebivaniya v stacionare (dni)'], "Rezul'tat1", 'count').fillna(0).plot(kind='bar', stacked=True).get_figure().savefig('plots/stacionar_res1.png')
+data.pivot_table('№', ['Operirujushhij hirurg'], "Rezul'tat1", 'count').fillna(0).plot(kind='bar', stacked=True).get_figure().savefig('plots/hirurg_res1.png')
+data.pivot_table('№', ['Vremja operacii'], "Rezul'tat1", 'count').fillna(0).plot().get_figure().savefig('plots/vremya_res1.png')
+data.pivot_table('№', ['Vozrast'], "Rezul'tat1", 'count').fillna(0).plot(kind='bar', stacked=True).get_figure().savefig('plots/vosrast_res1.png')
+data.pivot_table('№', ['Mesjac operacii'], "Rezul'tat1", 'count').fillna(0).plot(kind='bar', stacked=True).get_figure().savefig('plots/mesyac_res1.png')
+data.pivot_table('№', ["Vysejannaja kul'tura"], "Rezul'tat1", 'count').fillna(0).plot(kind='bar', stacked=True).get_figure().savefig('plots/vysev_res1.png')
+data.pivot_table('№', ['Vremya prebivaniya v stacionare (dni)'], "Rezul'tat1", 'count').fillna(0).plot(kind='bar', stacked=True).get_figure().savefig('plots/stacionar_res1.png')
 
 # data.pivot_table('PassengerId', ['Parch'], 'Survived', 'count').plot(ax=axes[1], title='Parch')
 plt.show()
